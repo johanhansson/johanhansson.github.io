@@ -10,8 +10,15 @@ images:
   - dc367c16-058b-481d-b7af-a5a7681ba052.jfif
 ---
 
-<div class="gallery">
+<section class="hero">
+  <h1>{{ page.title }}</h1>
+  <p class="contact">Kontakt: <a href="mailto:axelfhansson@gmail.com">axelfhansson@gmail.com</a></p>
+</section>
+
+<section class="gallery">
 {% for img in page.images %}
-  <img src="{{ '/assets/images/' | append: img | relative_url }}" alt="{{ img }}">
+  <figure class="gallery-item">
+    <img src="{{ '/assets/images/' | append: img | relative_url }}" alt="Bild {{ forloop.index }}">
+  </figure>
 {% endfor %}
-</div>
+</section>

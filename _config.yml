@@ -1,5 +1,4 @@
 title: "Axel Hansson"
 email: "axelfhansson@gmail.com"
-baseurl: "" # change if deploying to a subpath
-url: "https://your-domain.example" # replace with your site URL
-theme: minima # or leave out and use custom layout
+baseurl: ""
+url: "https://your-domain.example"
