@@ -1,19 +1,17 @@
 ---
 layout: default
 title: Axel Hansson
+images:
+  - 31bf173f-de67-45d0-b235-4c94ffb4b9e9.jfif
+  - 35065a67-974e-429b-8db2-a960ff45f315.jfif
+  - 514150f3-50e2-404b-b675-998589e7b447.jfif
+  - 723a231c-7c1b-4599-86a1-95211303b724.jfif
+  - a6e7c9b1-fcee-495c-8a42-345b74b1b5a5.jfif
+  - dc367c16-058b-481d-b7af-a5a7681ba052.jfif
 ---
 
-# Axel Hansson
-
-Contact: [axelfhansson@gmail.com](mailto:axelfhansson@gmail.com)
-
-- [Work](/)
-- [Info](/info/)
-
-<!-- Images (download and place under assets/images/, paths below assume that) -->
-<img src="{{ '/assets/images/bild2-1-732x1024.jpg' | relative_url }}" alt="bild2">
-<img src="{{ '/assets/images/bild1-730x1024.jpg' | relative_url }}" alt="bild1">
-<img src="{{ '/assets/images/bild5-683x1024.jpg' | relative_url }}" alt="bild5">
-<img src="{{ '/assets/images/bild6-732x1024.jpg' | relative_url }}" alt="bild6">
-<img src="{{ '/assets/images/bild4-683x1024.jpg' | relative_url }}" alt="bild4">
-<img src="{{ '/assets/images/bild3-732x1024.jpg' | relative_url }}" alt="bild3">
+<div class="gallery">
+{% for img in page.images %}
+  <img src="{{ '/assets/images/' | append: img | relative_url }}" alt="{{ img }}">
+{% endfor %}
+</div>
