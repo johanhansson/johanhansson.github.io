@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-brand">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="{{ '/' | relative_url }}">Work</a></li>
+        <li><a href="{{ '/info/' | relative_url }}">Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </footer>
+</body>
+</html>
